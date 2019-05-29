@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "es7",
+      "es2015.iterable",
+      "es2017",
+      "es2017.string",
+      "es2016.array.include",
+      "es2018",
+      "es2018.regexp",
+      "esnext.asynciterable",
+      "esnext.array"
+    ],
+    "jsx": "react",
+    "strict": true,
+    "declaration": true,
+    "declarationMap": true,
+    "composite": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}

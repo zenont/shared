@@ -1,0 +1,26 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "1.0.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "allowBranch": [
+        "feature/**",
+        "release/**",
+        "prerelease/**"
+      ],
+      "message": "chore(release): publish %s"
+    },
+    "version": {
+      "allowBranch": [
+        "feature/**",
+        "release/**",
+        "prerelease/**"
+      ],
+      "message": "chore(bump): bump version %s"
+    }
+  }
+}

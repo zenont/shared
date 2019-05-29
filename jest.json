@@ -1,0 +1,53 @@
+{
+  "collectCoverageFrom": [
+    "packages/*/src/**/*.mjs",
+    "packages/*/src/**/*.js",
+    "packages/*/src/**/*.ts",
+    "codemods/*/src/**/*.mjs",
+    "codemods/*/src/**/*.js",
+    "codemods/*/src/**/*.ts"
+  ],
+  "transform": {
+    "^.+\\.ts$": "ts-jest"
+  },
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/test/fixtures/",
+    "/test/debug-fixtures/",
+    "/babel-parser/test/expressions/",
+    "/test/tmp/",
+    "/test/__data__/",
+    "/test/helpers/",
+    "<rootDir>/test/warning\\.js",
+    "<rootDir>/build/",
+    "_browser\\.js",
+    "<rootDir>/(packages|codemods)/[^/]+/lib/",
+    "<rootDir>/(packages|codemods)/[^/]+/main/",
+    "<rootDir>/(packages|codemods)/[^/]+/module/",
+    "<rootDir>/(packages|codemods)/[^/]+/typings/"
+  ],
+  "testEnvironment": "node",
+  "transformIgnorePatterns": [
+    "/node_modules/",
+    "/test/(fixtures|tmp|__data__)/",
+    "<rootDir>/(packages|codemods)/[^/]+/lib/",
+    "<rootDir>/(packages|codemods)/[^/]+/main/",
+    "<rootDir>/(packages|codemods)/[^/]+/module/",
+    "<rootDir>/(packages|codemods)/[^/]+/typings/"
+  ],
+  "coveragePathIgnorePatterns": [
+    "/node_modules/",
+    "/test/(fixtures|tmp|__data__)/"
+  ],
+  "modulePathIgnorePatterns": [
+    "/test/fixtures/",
+    "/test/tmp/",
+    "/test/__data__/",
+    "<rootDir>/build/"
+  ],
+  "moduleNameMapper": {
+    "^@ztr/([a-zA-Z0-9_-]+)$": "<rootDir>/packages/$1/"
+  },
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
+  "cacheDirectory": "<rootDir>/.cache/unit"
+}

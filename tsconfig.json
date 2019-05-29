@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.settings.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "lib": ["dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@ztr/*": ["packages/*/src/"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules",
+    "**/dist",
+    "**/lib",
+    "**/typings",
+    "**/bin",
+    "**/main",
+    "**/module",
+    "**/.buildcache",
+    "**/__tests__",
+    "**/__stories__",
+    "**/*.spec.ts"
+  ]
+}

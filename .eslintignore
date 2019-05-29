@@ -1,0 +1,7 @@
+lib/
+dist/
+typings/
+main/
+module/
+node_modules
+terraform/
