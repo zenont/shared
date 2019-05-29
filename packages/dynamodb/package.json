@@ -1,0 +1,17 @@
+{
+  "name": "@ztr/dynamodb",
+  "version": "0.0.1",
+  "author": {
+    "name": "Zenon Trujillo"
+  },
+  "sideEffects": false,
+  "main": "main/index.js",
+  "module": "module/index.js",
+  "types": "typings/index.d.ts",
+  "peerDependencies": {
+    "aws-sdk": "^2.463.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.463.0"
+  }
+}

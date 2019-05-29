@@ -2,13 +2,9 @@
   "extends": "./tsconfig.settings.json",
   "files": [],
   "references": [
-    { "path": "packages/cajita-core/tsconfig.esnext.json" },
-    { "path": "packages/cajita-util/tsconfig.esnext.json" },
-    { "path": "packages/cajita-s3/tsconfig.esnext.json" },
-    { "path": "packages/cajita-dynamo/tsconfig.esnext.json" },
-    { "path": "packages/cajita-config/tsconfig.esnext.json" },
-    { "path": "packages/cajita-graphql/tsconfig.esnext.json" },
-    { "path": "packages/cajita-react/tsconfig.esnext.json" }
+    { "path": "packages/core/tsconfig.esnext.json" },
+    { "path": "packages/util/tsconfig.esnext.json" },
+    { "path": "packages/dynamodb/tsconfig.esnext.json" }
   ],
   "exclude": [
     "node_modules",
