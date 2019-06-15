@@ -55,11 +55,11 @@ describe('env', () => {
       NODE_ENV
     }
 
-    expect(isEnv(NODE_ENV))
-    expect(isDevelopment()).toMatchSnapshot()
-    expect(isTest()).toMatchSnapshot()
-    expect(isStaging()).toMatchSnapshot()
-    expect(isProduction()).toMatchSnapshot()
+    expect(isEnv(NODE_ENV)).toBe(true)
+    expect(isDevelopment()).toBe(true)
+    expect(isTest()).toBe(false)
+    expect(isStaging()).toBe(false)
+    expect(isProduction()).toBe(false)
   })
 
   it('should get NODE_ENV test', () => {
@@ -68,11 +68,11 @@ describe('env', () => {
       NODE_ENV
     }
 
-    expect(isEnv(NODE_ENV))
-    expect(isDevelopment()).toMatchSnapshot()
-    expect(isTest()).toMatchSnapshot()
-    expect(isStaging()).toMatchSnapshot()
-    expect(isProduction()).toMatchSnapshot()
+    expect(isEnv(NODE_ENV)).toBe(true)
+    expect(isDevelopment()).toBe(false)
+    expect(isTest()).toBe(true)
+    expect(isStaging()).toBe(false)
+    expect(isProduction()).toBe(false)
   })
 
   it('should get NODE_ENV staging', () => {
@@ -81,11 +81,11 @@ describe('env', () => {
       NODE_ENV
     }
 
-    expect(isEnv(NODE_ENV))
-    expect(isDevelopment()).toMatchSnapshot()
-    expect(isTest()).toMatchSnapshot()
-    expect(isStaging()).toMatchSnapshot()
-    expect(isProduction()).toMatchSnapshot()
+    expect(isEnv(NODE_ENV)).toBe(true)
+    expect(isDevelopment()).toBe(false)
+    expect(isTest()).toBe(false)
+    expect(isStaging()).toBe(true)
+    expect(isProduction()).toBe(false)
   })
 
   it('should get NODE_ENV production', () => {
@@ -94,10 +94,10 @@ describe('env', () => {
       NODE_ENV
     }
 
-    expect(isEnv(NODE_ENV))
-    expect(isDevelopment()).toMatchSnapshot()
-    expect(isTest()).toMatchSnapshot()
-    expect(isStaging()).toMatchSnapshot()
-    expect(isProduction()).toMatchSnapshot()
+    expect(isEnv(NODE_ENV)).toBe(true)
+    expect(isDevelopment()).toBe(false)
+    expect(isTest()).toBe(false)
+    expect(isStaging()).toBe(false)
+    expect(isProduction()).toBe(true)
   })
 })
