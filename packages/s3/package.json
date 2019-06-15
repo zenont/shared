@@ -16,5 +16,6 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.463.0"
-  }
+  },
+  "gitHead": "65e544542b1db970f8b6926e146ba558b194bb2d"
 }
