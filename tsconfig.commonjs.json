@@ -3,7 +3,8 @@
   "files": [],
   "references": [
     { "path": "packages/core/tsconfig.commonjs.json" },
-    { "path": "packages/util/tsconfig.commonjs.json" }
+    { "path": "packages/util/tsconfig.commonjs.json" },
+    { "path": "packages/s3/tsconfig.commonjs.json" }
   ],
   "exclude": [
     "node_modules",
