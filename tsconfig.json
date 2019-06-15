@@ -7,7 +7,8 @@
     "baseUrl": ".",
     "paths": {
       "@ztr/*": ["packages/*/src/"]
-    }
+    },
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules",

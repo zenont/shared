@@ -1,34 +1,47 @@
-import process from 'process'
+export function getProcessEnv() {
+  if (typeof process !== 'undefined') {
+    return process.env
+  }
+  return undefined
+}
 
-export type NodeEnvironment = 'development' | 'test' | 'staging' | 'production'
+export const isDebug = () => {
+  const env = getProcessEnv()
+  return env ? env.DEBUG === 'true' : false
+}
 
-export const isDebug = () => !!process.env.DEBUG
+export const isEnv = (env: string) => process.env.NODE_ENV === env
 
-export const isNodeEnv = (env: NodeEnvironment) => process.env.NODE_ENV === env
+export const isDevelopment = () => isEnv('development')
 
-export const isDevelopment = () => isNodeEnv('development')
+export const isTest = () => isEnv('test')
 
-export const isProduction = () => isNodeEnv('production')
+export const isStaging = () => isEnv('staging')
 
-export function getEnvVariable(key: string): string | undefined
-export function getEnvVariable(key: string, defaultValue: string): string
-export function getEnvVariable(
+export const isProduction = () => isEnv('production')
+
+export function hasVariable(key: string): boolean {
+  const env = getProcessEnv()
+  return env ? env[key] != null : false
+}
+
+export function getEnvVar(key: string): string | undefined
+export function getEnvVar(key: string, defaultValue: string): string
+export function getEnvVar(
   key: string,
   defaultValue?: string
 ): string | undefined
-export function getEnvVariable(
+export function getEnvVar(
   key: string,
   defaultValue?: string
 ): string | undefined {
-  return process.env[key] || defaultValue
+  const env = getProcessEnv()
+  return (env && env[key]) || defaultValue
 }
 
-export function getEnvVariableOrThrow(
-  key: string,
-  defaultValue?: string
-): string {
-  const value = getEnvVariable(key, defaultValue)
-  if (!value || value.length <= 0)
+export function getEnvVarOrThrow(key: string, throwOnBlank = true): string {
+  const value = getEnvVar(key)
+  if (!value || (throwOnBlank === true && value.trim() === ''))
     throw new Error(`Environment variable ${key} is null, blank or undefined`)
 
   return value

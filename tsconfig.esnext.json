@@ -3,8 +3,7 @@
   "files": [],
   "references": [
     { "path": "packages/core/tsconfig.esnext.json" },
-    { "path": "packages/util/tsconfig.esnext.json" },
-    { "path": "packages/dynamodb/tsconfig.esnext.json" }
+    { "path": "packages/util/tsconfig.esnext.json" }
   ],
   "exclude": [
     "node_modules",
