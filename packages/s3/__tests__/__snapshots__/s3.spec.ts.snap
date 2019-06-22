@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`s3 should get JSON 1`] = `"my-test"`;
+
+exports[`s3 should get base64 1`] = `"\\"encodeme\\""`;
+
+exports[`s3 should put JSON 1`] = `"Fake VersionId: \\"{\\\\\\"test\\\\\\":1}\\""`;
+
+exports[`s3 should put base64 1`] = `"Fake VersionId: \\"ImVuY29kZW1lIg==\\""`;
