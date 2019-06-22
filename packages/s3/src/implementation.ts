@@ -1,5 +1,5 @@
 import AWS from 'aws-sdk'
-import { toBase64, fromBase64 } from '@ztr/util'
+import { toBase64, fromBase64 } from '@kuauitl/util'
 import { BaseS3OperationManager, BaseS3Manager } from './abstract'
 
 export class S3BucketManager extends BaseS3OperationManager {

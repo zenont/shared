@@ -6,7 +6,7 @@
     "lib": ["dom"],
     "baseUrl": ".",
     "paths": {
-      "@ztr/*": ["packages/*/src/"]
+      "@kuauitl/*": ["packages/*/src/"]
     },
     "emitDecoratorMetadata": true
   },
