@@ -15,6 +15,7 @@
     "aws-sdk": "^2.463.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.463.0"
+    "aws-sdk": "^2.463.0",
+    "typescript": "^3.4.5"
   }
 }
