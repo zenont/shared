@@ -26,7 +26,7 @@
     "policy:check:rules": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx",
     "policy:check:format": "prettier --check \"./**/**.{ts,tsx,js,jsx,json,scss,css}\"",
     "policy:check:audit": "yarn audit",
-    "policy:check:test": "run-s test",
+    "policy:check:test": "jest --ci --bail --config jest.json",
     "policy:all": "run-p policy:check:*",
     "policy": "run-s build policy:all",
     "bump": "lerna version --dist-tag latest --conventional-commits --yes",
