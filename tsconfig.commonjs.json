@@ -1,9 +1,7 @@
 {
   "extends": "./tsconfig.settings.json",
   "files": [],
-  "references": [
-    { "path": "packages/core/tsconfig.commonjs.json" }
-  ],
+  "references": [{ "path": "packages/core/tsconfig.commonjs.json" }],
   "exclude": [
     "node_modules",
     "**/dist",
