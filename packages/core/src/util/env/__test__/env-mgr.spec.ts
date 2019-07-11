@@ -132,4 +132,11 @@ describe('NodeProcessEnvMgr', () => {
     const env = provideEnv<CustomEnv>()
     expect(env.isEnv('custom')).toBe(false)
   })
+
+  it('should set env key', () => {
+    const env = provideEnv<ProcessEnv, 'MY_ENV_VAR' | 'MY_ENV_VAR1'>()
+    env.set('MY_ENV_VAR', 'my_value')
+    expect(env.get('MY_ENV_VAR')).toBe('my_value')
+    expect(env.get('MY_ENV_VAR1')).toBe(undefined)
+  })
 })

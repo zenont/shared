@@ -9,7 +9,7 @@ import {
 
 export class NodeProcessEnvMgr<
   T extends string = NodeEnv,
-  K extends KnownEnvKey = KnownEnvKey
+  K extends string = KnownEnvKey
 > {
   has(key: K) {
     return hasEnvVar(key)
@@ -50,7 +50,7 @@ export class NodeProcessEnvMgr<
 
 export function provideEnv<
   T extends string = NodeEnv,
-  K extends KnownEnvKey = KnownEnvKey
+  K extends string = KnownEnvKey
 >() {
   return new NodeProcessEnvMgr<T, K>()
 }
