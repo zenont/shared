@@ -1,5 +1,4 @@
-import { provideEnv } from '../manager'
-import { ProcessEnv } from '../types'
+import { provideEnv, ProcessEnv } from '../src'
 
 describe('NodeProcessEnvMgr', () => {
   const ORIGINAL = process

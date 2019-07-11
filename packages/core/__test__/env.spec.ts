@@ -10,7 +10,7 @@ import {
   setEnvVar,
   getEnvVar,
   getEnvVarOrThrow
-} from '../util'
+} from '../src'
 
 describe('getProcess', () => {
   const ORIGINAL_PRC = process

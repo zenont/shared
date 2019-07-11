@@ -1,4 +1,4 @@
-import { Kind, isOfKind } from '../kind'
+import { Kind, isOfKind } from '../src'
 
 describe('segregator', () => {
   it('should segregate kind', () => {
