@@ -46,7 +46,7 @@
     "<rootDir>/build/"
   ],
   "moduleNameMapper": {
-    "^@ztr/([a-zA-Z0-9_-]+)$": "<rootDir>/packages/$1/"
+    "^@kuauitl/([a-zA-Z0-9_-]+)$": "<rootDir>/packages/$1/"
   },
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
   "cacheDirectory": "<rootDir>/.cache/unit"

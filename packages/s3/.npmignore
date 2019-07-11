@@ -1,6 +1,0 @@
-tsconfig.*
-rollup.*
-.rpt2_cache
-.buildcache
-webpack.*
-__test__
