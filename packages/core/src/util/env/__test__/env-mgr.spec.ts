@@ -1,4 +1,4 @@
-import { provideEnv } from '../src'
+import { provideEnv } from '../manager'
 
 describe('provideEnv', () => {
   const ORIGINAL = process
