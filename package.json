@@ -20,7 +20,7 @@
     "build": "run-s compile:cjs compile:es",
     "test": "jest --config jest.json --coverage",
     "publish:latest": "lerna publish from-package --no-git-reset --dist-tag latest --yes",
-    "publish:next": "lerna publish prerelease from-package --preid beta --dist-tag next --yes",
+    "publish:next": "lerna publish from-package --dist-tag next",
     "watch": "tsc -b tsconfig.commonjs.json -w --preserveWatchOutput",
     "concurrent:watch": "concurrently \"npm:watch:*\"",
     "policy:check:rules": "eslint . --ext .js --ext .jsx --ext .ts --ext .tsx",
