@@ -5,3 +5,5 @@ main/
 module/
 node_modules
 terraform/
+coverage/
+.cache/
