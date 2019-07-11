@@ -9,7 +9,7 @@
   "module": "module/index.js",
   "types": "typings/index.d.ts",
   "scripts": {
-    "cleanup": "rimraf typings main module types util **/*.js **/*.ts **/*.map"
+    "cleanup": "rimraf typings main module .buildcache"
   },
   "devDependencies": {
     "typescript": "^3.5.0"
