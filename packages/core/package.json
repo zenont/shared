@@ -11,6 +11,9 @@
   "scripts": {
     "cleanup": "rimraf typings main module .buildcache"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "typescript": "^3.5.0"
   }
