@@ -11,7 +11,7 @@ export type Encoding =
   | 'hex'
 
 export const fromBase64 = (value: string, encoding?: Encoding) =>
-  new Buffer(`${value}`, 'base64').toString(encoding)
+  Buffer.from(`${value}`, 'base64').toString(encoding)
 
 export const toBase64 = (value: string, encoding?: Encoding) =>
   Buffer.from(value, encoding).toString('base64')
