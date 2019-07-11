@@ -8,7 +8,7 @@ import {
 } from './util'
 
 export class NodeProcessEnvMgr<
-  T extends NodeEnv = NodeEnv,
+  T extends string = NodeEnv,
   K extends KnownEnvKey = KnownEnvKey
 > {
   has(key: K) {
@@ -49,7 +49,7 @@ export class NodeProcessEnvMgr<
 }
 
 export function provideEnv<
-  T extends NodeEnv = NodeEnv,
+  T extends string = NodeEnv,
   K extends KnownEnvKey = KnownEnvKey
 >() {
   return new NodeProcessEnvMgr<T, K>()
