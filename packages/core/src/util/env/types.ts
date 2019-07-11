@@ -23,7 +23,7 @@ export type NodeKnownEnvKey =
   | 'TZ'
   | 'NODE_PATH'
 
-export type KnownEnvKey = NodeKnownEnvKey & AWSKnownEnvKey
+export type KnownEnvKey = NodeKnownEnvKey | AWSKnownEnvKey
 
 export type NodeEnv = 'development' | 'test' | 'staging' | 'production'
 export type ProcessEnv = NodeEnv
