@@ -3,5 +3,4 @@ rollup.*
 .rpt2_cache
 .buildcache
 webpack.*
-.DS_Store
-/lib/
+__test__
