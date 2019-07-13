@@ -1,3 +1,1 @@
-export * from './common'
-export * from './segregator'
-export * from './util'
+export { default as Button } from './button'
