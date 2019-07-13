@@ -4,7 +4,10 @@
     "emitDeclarationOnly": true
   },
   "files": [],
-  "references": [{ "path": "packages/core/tsconfig.commonjs.json" }],
+  "references": [
+    { "path": "packages/core/tsconfig.commonjs.json" },
+    { "path": "packages/react-web/tsconfig.commonjs.json" }
+  ],
   "exclude": [
     "node_modules",
     "**/dist",
