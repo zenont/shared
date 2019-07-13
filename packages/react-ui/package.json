@@ -1,5 +1,5 @@
 {
-  "name": "@kuauitl/core",
+  "name": "@kuauitl/react-ui",
   "version": "1.0.0-alpha.0",
   "author": {
     "name": "Zenon Trujillo"
@@ -13,5 +13,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
   }
 }

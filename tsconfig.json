@@ -2,6 +2,9 @@
   "extends": "./tsconfig.settings.json",
   "compilerOptions": {
     "experimentalDecorators": true,
+    "composite": false,
+    "declaration": false,
+    "isolatedModules": true,
     "module": "commonjs",
     "lib": ["dom"],
     "baseUrl": ".",
