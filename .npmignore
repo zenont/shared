@@ -4,3 +4,4 @@ rollup.*
 .buildcache
 webpack.*
 .DS_Store
+/lib/

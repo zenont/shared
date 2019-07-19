@@ -4,7 +4,10 @@
     "emitDeclarationOnly": true
   },
   "files": [],
-  "references": [{ "path": "packages/core/tsconfig.esnext.json" }],
+  "references": [
+    { "path": "packages/core/tsconfig.esnext.json" },
+    { "path": "packages/react-web/tsconfig.esnext.json" }
+  ],
   "exclude": [
     "node_modules",
     "**/dist",
