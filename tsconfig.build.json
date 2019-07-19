@@ -5,7 +5,8 @@
   },
   "files": [],
   "references": [
-    { "path": "packages/core/tsconfig.build.json" },
+    { "path": "packages/isomorphic-core/tsconfig.build.json" },
+    { "path": "packages/isomorphic-util/tsconfig.build.json" },
     { "path": "packages/react-web/tsconfig.build.json" }
   ],
   "exclude": [

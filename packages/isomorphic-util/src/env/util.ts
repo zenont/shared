@@ -1,13 +1,23 @@
 export function isBrowser() {
-  return typeof window !== 'undefined'
+  return typeof window !== 'undefined' && typeof document !== 'undefined'
 }
 
 export function isNode() {
-  return typeof global !== 'undefined'
+  return (
+    typeof global !== 'undefined' &&
+    typeof global.process !== 'undefined' &&
+    typeof global.process.versions !== 'undefined' &&
+    typeof global.process.versions.node !== 'undefined'
+  )
 }
 
 export function isWebWorker() {
-  return typeof self !== 'undefined'
+  return (
+    typeof self !== 'undefined' &&
+    typeof self === 'object' &&
+    self.constructor &&
+    self.constructor.name === 'DedicatedWorkerGlobalScope'
+  )
 }
 
 export function getProcess(): NodeJS.Process | undefined {

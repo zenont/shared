@@ -10,6 +10,7 @@
     "packages/*"
   ],
   "scripts": {
+    "install-pkg": "yarn install",
     "bootstrap": "lerna bootstrap",
     "cleanup": "lerna run cleanup --parallel",
     "lint:rules": "eslint --fix . --ext .js --ext .jsx --ext .ts --ext .tsx",
@@ -21,6 +22,7 @@
     "watch:lib": "lerna run --parallel transpile -- -w",
     "watch:typings": "tsc -b tsconfig.build.json -w --preserveWatchOutput",
     "watch": "concurrently npm:watch:*",
+    "dev": "run-s install-pkg bootstrap watch",
     "test": "jest --config jest.json",
     "test:dev": "jest --config jest.json -o --coverage --watch",
     "publish:latest": "lerna publish from-package --no-git-reset --dist-tag latest --yes",

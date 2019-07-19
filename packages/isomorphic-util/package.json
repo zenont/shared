@@ -1,5 +1,5 @@
 {
-  "name": "@kuauitl/core",
+  "name": "@kuauitl/isomorphic-util",
   "version": "1.0.0-alpha.0",
   "author": {
     "name": "Zenon Trujillo"
