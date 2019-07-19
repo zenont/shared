@@ -5,6 +5,7 @@ module.exports = {
     '@babel/preset-react'
   ],
   plugins: [
+    'babel-plugin-emotion',
     '@babel/proposal-class-properties',
     '@babel/proposal-object-rest-spread'
   ]

@@ -1,10 +1,20 @@
-import React, { FunctionComponent, PropsWithChildren } from 'react'
+import React, { FunctionComponent, DetailedHTMLProps } from 'react'
+import styled from '@emotion/styled'
 
-type C = FunctionComponent<PropsWithChildren<{}>>
+type P = DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+>
+
+type C = FunctionComponent<P>
+
+const Layout = styled.button`
+  width: 50px;
+`
 
 export const Button: C = props => {
   const { children, ...rest } = props
-  return <button {...rest}>{children}</button>
+  return <Layout {...rest}>{children}</Layout>
 }
 
 export default Button
