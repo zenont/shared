@@ -5,8 +5,8 @@
   },
   "files": [],
   "references": [
-    { "path": "packages/core/tsconfig.esnext.json" },
-    { "path": "packages/react-web/tsconfig.esnext.json" }
+    { "path": "packages/core/tsconfig.build.json" },
+    { "path": "packages/react-web/tsconfig.build.json" }
   ],
   "exclude": [
     "node_modules",
