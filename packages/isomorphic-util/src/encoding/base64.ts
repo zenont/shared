@@ -1,3 +1,5 @@
+import { base64EncArr } from './browser-util'
+import { strToUTF8Arr, base64DecToArr, UTF8ArrToStr } from './browser-utf8'
 import { isBrowser, isWebWorker } from '../env'
 
 export type Encoding =
@@ -12,12 +14,19 @@ export type Encoding =
   | 'binary'
   | 'hex'
 
-export const fromBase64 = (value: string, encoding?: Encoding) =>
-  isBrowser() || isWebWorker()
-    ? globalThis.atob(value)
-    : Buffer.from(`${value}`, 'base64').toString(encoding)
+export const fromBase64 = (value: string, encoding?: Encoding) => {
+  if (isBrowser() || isWebWorker()) {
+    const aMyUTF8Output = base64DecToArr(value)
+    return UTF8ArrToStr(aMyUTF8Output)
+  }
 
-export const toBase64 = (value: string, encoding?: Encoding) =>
-  isBrowser() || isWebWorker()
-    ? globalThis.btoa(value)
-    : Buffer.from(value, encoding).toString('base64')
+  return Buffer.from(`${value}`, 'base64').toString(encoding)
+}
+
+export const toBase64 = (value: string, encoding?: Encoding) => {
+  if (isBrowser() || isWebWorker()) {
+    const aMyUTF8Input = strToUTF8Arr(value)
+    return base64EncArr(aMyUTF8Input)
+  }
+  return Buffer.from(value, encoding).toString('base64')
+}

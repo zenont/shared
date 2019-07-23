@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`base64 node should encode symbols utf-8 to base64 1`] = `"4pi44pi54pi64pi74pi84pi+4pi/"`;
