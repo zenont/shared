@@ -7,7 +7,7 @@
   "references": [
     { "path": "packages/isomorphic-core/tsconfig.build.json" },
     { "path": "packages/isomorphic-util/tsconfig.build.json" },
-    { "path": "packages/react-web/tsconfig.build.json" }
+    { "path": "packages/isomorphic-react-ui/tsconfig.build.json" }
   ],
   "exclude": [
     "node_modules",
