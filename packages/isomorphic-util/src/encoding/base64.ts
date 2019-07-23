@@ -4,8 +4,8 @@ import { isBrowser, isWebWorker } from '../env'
 
 export const fromBase64 = (value: string) => {
   if (isBrowser() || isWebWorker()) {
-    const aMyUTF8Output = base64DecToArr(value)
-    return UTF8ArrToStr(aMyUTF8Output)
+    const output = base64DecToArr(value)
+    return UTF8ArrToStr(output)
   }
 
   return Buffer.from(`${value}`, 'base64').toString('utf8')
@@ -13,8 +13,8 @@ export const fromBase64 = (value: string) => {
 
 export const toBase64 = (value: string) => {
   if (isBrowser() || isWebWorker()) {
-    const aMyUTF8Input = strToUTF8Arr(value)
-    return base64EncArr(aMyUTF8Input)
+    const output = strToUTF8Arr(value)
+    return base64EncArr(output)
   }
   return Buffer.from(value, 'utf8').toString('base64')
 }
