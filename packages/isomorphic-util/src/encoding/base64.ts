@@ -1,3 +1,5 @@
+import { isBrowser, isWebWorker } from '../env'
+
 export type Encoding =
   | 'ascii'
   | 'utf8'
@@ -11,7 +13,11 @@ export type Encoding =
   | 'hex'
 
 export const fromBase64 = (value: string, encoding?: Encoding) =>
-  Buffer.from(`${value}`, 'base64').toString(encoding)
+  isBrowser() || isWebWorker()
+    ? globalThis.atob(value)
+    : Buffer.from(`${value}`, 'base64').toString(encoding)
 
 export const toBase64 = (value: string, encoding?: Encoding) =>
-  Buffer.from(value, encoding).toString('base64')
+  isBrowser() || isWebWorker()
+    ? globalThis.btoa(value)
+    : Buffer.from(value, encoding).toString('base64')
