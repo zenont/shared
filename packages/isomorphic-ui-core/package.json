@@ -1,6 +1,6 @@
 {
   "name": "@kuauitl/isomorphic-ui-core",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "repository": "https://github.com/zenont/shared.git",
   "license": "MIT",
   "author": {
@@ -18,9 +18,9 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
     "@emotion/core": "^10.0.0",
-    "@emotion/styled": "^10.0.0"
+    "@emotion/styled": "^10.0.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   }
 }

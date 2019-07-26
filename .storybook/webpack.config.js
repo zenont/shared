@@ -1,4 +1,5 @@
 module.exports = ({ config }) => {
+  config.resolu
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
     use: [

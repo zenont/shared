@@ -84,7 +84,6 @@
     "concurrently": "^4.1.1",
     "core-js": "^3.1.4",
     "cross-env": "^5.2.0",
-    "docz": "^1.2.0",
     "dotenv": "^7.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -117,5 +116,9 @@
     "ts-node": "^8.1.0",
     "typescript": "^3.5.3",
     "webpack": "^4.36.1"
+  },
+  "resolutions": {
+    "lodash": "4.17.15",
+    "marked": "0.7.0"
   }
 }
