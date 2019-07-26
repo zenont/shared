@@ -1,7 +1,4 @@
 {
-  "name": "kuauitl-shared",
-  "description": "Zenon's Shared Libraries",
-  "main": "index.js",
   "repository": "https://github.com/zenont/shared.git",
   "author": "Zenon Trujillo <zenon.t@outlook.com>",
   "license": "MIT",

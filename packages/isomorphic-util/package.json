@@ -1,9 +1,9 @@
 {
   "name": "@kuauitl/isomorphic-util",
   "version": "1.0.0-alpha.0",
-  "author": {
-    "name": "Zenon Trujillo"
-  },
+  "repository": "https://github.com/zenont/shared.git",
+  "author": "Zenon Trujillo <zenon.t@outlook.com>",
+  "license": "MIT",
   "sideEffects": false,
   "main": "main/index.js",
   "module": "module/index.js",
