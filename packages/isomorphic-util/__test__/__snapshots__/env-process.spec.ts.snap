@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`env getEnvVar should default env var 1`] = `"LOLZ"`;
+
+exports[`env getEnvVar should find env and not throw 1`] = `"LOLZ"`;
+
+exports[`env getEnvVar should get env var 1`] = `"LOLZ"`;
+
+exports[`env setEnvVar should set env var 1`] = `
+Object {
+  "LOL": "LOL_ME",
+}
+`;

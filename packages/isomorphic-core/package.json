@@ -1,0 +1,23 @@
+{
+  "name": "@kuauitl/isomorphic-core",
+  "version": "1.0.0-alpha.1",
+  "repository": "https://github.com/zenont/shared.git",
+  "license": "MIT",
+  "author": {
+    "name": "Zenon Trujillo"
+  },
+  "sideEffects": false,
+  "main": "main/index.js",
+  "module": "module/index.js",
+  "types": "typings/index.d.ts",
+  "scripts": {
+    "cleanup": "rimraf typings main module lib .buildcache",
+    "transpile": "rollup -c rollup.config.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "core-js": "^3.1.0"
+  }
+}

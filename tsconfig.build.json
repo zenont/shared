@@ -1,0 +1,25 @@
+{
+  "extends": "./tsconfig.settings.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true
+  },
+  "files": [],
+  "references": [
+    { "path": "packages/isomorphic-core/tsconfig.build.json" },
+    { "path": "packages/isomorphic-util/tsconfig.build.json" },
+    { "path": "packages/isomorphic-ui-core/tsconfig.build.json" }
+  ],
+  "exclude": [
+    "node_modules",
+    "**/dist",
+    "**/lib",
+    "**/typings",
+    "**/bin",
+    "**/main",
+    "**/module",
+    "**/.buildcache",
+    "**/__tests__",
+    "**/__stories__",
+    "**/*.spec.ts"
+  ]
+}

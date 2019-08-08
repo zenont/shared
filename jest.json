@@ -8,7 +8,7 @@
     "codemods/*/src/**/*.ts"
   ],
   "transform": {
-    "^.+\\.ts$": "ts-jest"
+    "^.+\\.ts$": "babel-jest"
   },
   "testPathIgnorePatterns": [
     "/node_modules/",
