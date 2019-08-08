@@ -8,9 +8,7 @@
   "command": {
     "publish": {
       "allowBranch": [
-        "feature/**",
-        "release/**",
-        "prerelease/**"
+        "master"
       ],
       "message": "chore(release): publish %s"
     },
