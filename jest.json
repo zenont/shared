@@ -49,5 +49,6 @@
     "^@kuauitl/([a-zA-Z0-9_-]+)$": "<rootDir>/packages/$1/"
   },
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json"],
-  "cacheDirectory": "<rootDir>/.cache/unit"
+  "cacheDirectory": "<rootDir>/.cache/unit",
+  "setupFiles": ["jsdom-worker"]
 }
