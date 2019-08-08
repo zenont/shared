@@ -63,8 +63,8 @@ export function setEnvVar(key: string, value: string): void {
   env[key] = value
 }
 
-export function getEnvVar(key: string): string | undefined
 export function getEnvVar(key: string, defaultValue: string): string
+//export function getEnvVar(key: string): string | undefined
 export function getEnvVar(
   key: string,
   defaultValue?: string

@@ -1,4 +1,4 @@
-import { NodeEnv, KnownEnvKey } from './types'
+import { NodeEnv } from './types'
 import {
   isNodeEnvironment,
   isDebug,
@@ -7,19 +7,18 @@ import {
   setEnvVar
 } from './util'
 
-export class NodeProcessEnvMgr<
-  T extends string = NodeEnv,
-  K extends string = KnownEnvKey
-> {
-  has(key: K) {
+export class NodeProcessEnvMgr {
+  has(key: string) {
     return hasEnvVar(key)
   }
 
-  get(key: K): string | undefined {
-    return getEnvVar(key)
+  get(key: string, defaultValue: string): string
+  get(key: string, defaultValue?: string): string | undefined
+  get(key: string, defaultValue?: string) {
+    return getEnvVar(key, defaultValue)
   }
 
-  set(key: K, value: string): void {
+  set(key: string, value: string): void {
     setEnvVar(key, value)
   }
 
@@ -27,7 +26,7 @@ export class NodeProcessEnvMgr<
     return isDebug()
   }
 
-  isEnv(envName: T) {
+  isEnv(envName: NodeEnv | string) {
     return isNodeEnvironment(envName)
   }
 
@@ -48,9 +47,6 @@ export class NodeProcessEnvMgr<
   }
 }
 
-export function provideEnv<
-  T extends string = NodeEnv,
-  K extends string = KnownEnvKey
->() {
-  return new NodeProcessEnvMgr<T, K>()
+export function provideEnv() {
+  return new NodeProcessEnvMgr()
 }
