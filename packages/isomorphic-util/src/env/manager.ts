@@ -4,6 +4,7 @@ import {
   isDebug,
   hasEnvVar,
   getEnvVar,
+  getEnvVarOrThrow,
   setEnvVar
 } from './util'
 
@@ -16,6 +17,10 @@ export class NodeProcessEnvMgr {
   get(key: string, defaultValue?: string): string | undefined
   get(key: string, defaultValue?: string) {
     return getEnvVar(key, defaultValue)
+  }
+
+  getOrThrow(key: string) {
+    return getEnvVarOrThrow(key)
   }
 
   set(key: string, value: string): void {

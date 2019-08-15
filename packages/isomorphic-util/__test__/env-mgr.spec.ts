@@ -29,5 +29,15 @@ describe('env', () => {
         provideEnv().get('AWS_SECRET_ACCESS_KEY', AWS_SECRET_ACCESS_KEY)
       ).toBe(AWS_SECRET_ACCESS_KEY)
     })
+
+    it('should getOrThrow and throw', () => {
+      expect(() => provideEnv().getOrThrow('SOME_VAR')).toThrowError()
+    })
+
+    it('should getOrThrow and not throw', () => {
+      const SOME_VAR = 'SOME_VAR'
+      process.env.SOME_VAR = SOME_VAR
+      expect(provideEnv().getOrThrow('SOME_VAR')).toBe(SOME_VAR)
+    })
   })
 })
