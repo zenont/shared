@@ -35,10 +35,7 @@
     "policy:check:test": "jest --config jest.json --changedSince master --ci --bail --reporters=\"default\"",
     "policy:all": "run-p policy:check:*",
     "policy": "run-s build policy:all",
-    "bump": "lerna version --dist-tag latest --conventional-commits --yes",
-    "bump:patch": "lerna version patch --dist-tag latest --yes",
-    "bump:minor": "lerna version minor --dist-tag latest --yes",
-    "bump:major": "lerna version major --dist-tag latest --yes"
+    "bump": "lerna version latest --conventional-commits --yes"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
