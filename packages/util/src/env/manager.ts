@@ -1,6 +1,6 @@
 import { NodeEnv } from './types'
 import {
-  isNodeEnvironment,
+  isNodeEnv,
   isDebug,
   hasEnvVar,
   getEnvVar,
@@ -31,24 +31,24 @@ export class NodeProcessEnvMgr {
     return isDebug()
   }
 
-  isEnv(envName: NodeEnv | string) {
-    return isNodeEnvironment(envName)
+  isNodeEnv(envName: NodeEnv | string) {
+    return isNodeEnv(envName)
   }
 
   isDevelopment() {
-    return isNodeEnvironment('development')
+    return isNodeEnv('development')
   }
 
   isTest() {
-    return isNodeEnvironment('test')
+    return isNodeEnv('test')
   }
 
   isStaging() {
-    return isNodeEnvironment('staging')
+    return isNodeEnv('staging')
   }
 
   isProduction() {
-    return isNodeEnvironment('production')
+    return isNodeEnv('production')
   }
 }
 

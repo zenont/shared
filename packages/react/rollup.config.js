@@ -22,11 +22,13 @@ export default {
   output: [
     {
       dir: 'main',
-      format: 'cjs'
+      format: 'cjs',
+      sourcemap: true
     },
     {
       dir: 'module',
-      format: 'es'
+      format: 'es',
+      sourcemap: true
     }
   ]
 }

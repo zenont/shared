@@ -2,7 +2,7 @@ export function isBrowser() {
   return typeof window !== 'undefined' && typeof document !== 'undefined'
 }
 
-export function isNode() {
+export function isNodeRuntime() {
   return (
     typeof global !== 'undefined' &&
     typeof global.process !== 'undefined' &&
@@ -43,7 +43,7 @@ export function getProcessEnvOrInit(): NodeJS.ProcessEnv {
  * @param {string} envName The environment name to match (i.e. development, test or production).
  * @returns {boolean}
  */
-export function isNodeEnvironment(envName: string): boolean {
+export function isNodeEnv(envName: string): boolean {
   const env = getProcessEnvOrInit()
   return env.NODE_ENV === envName
 }
