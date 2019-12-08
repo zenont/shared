@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "ES5",
+    "module": "ESNext",
     "lib": [
-      "dom",
-      "es7",
-      "es2015.iterable",
-      "es2017",
-      "es2017.string",
-      "es2016.array.include",
-      "es2018",
-      "es2018.regexp",
-      "esnext"
+      "DOM",
+      "DOM.Iterable",
+      "ES2015",
+      "ES2015.Iterable",
+      "ES2017",
+      "ES2017.Intl",
+      "ES2017.String",
+      "ES2018",
+      "ES2019",
+      "ESNext"
     ],
     "jsx": "react",
     "strict": true,
