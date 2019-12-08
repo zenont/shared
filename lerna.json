@@ -14,10 +14,7 @@
     },
     "version": {
       "allowBranch": [
-        "master",
-        "feature/**",
-        "release/**",
-        "prerelease/**"
+        "master"
       ],
       "message": "chore(bump): bump version %s"
     }
